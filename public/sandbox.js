@@ -171,3 +171,21 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(type.value, toform.value, details.value, amount.valueAsNumber);
 });
+//==12 classes
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`;
+    }
+}
+const invOne = new Invoice('mario', 'Work on mario website', 250);
+const invTwo = new Invoice('luigi', 'Work on luigi website', 300);
+//console.log(invOne, invTwo);
+let invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+console.table(invoices);

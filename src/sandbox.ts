@@ -143,3 +143,43 @@ console.log(ninjaAny)
 
 ninjaAny = {name:25, age:"oi"}
 console.log(ninjaAny);
+
+
+
+//====8 function basics
+
+let greets = () => {
+  console.log('oi')
+}
+
+let greet: Function;
+
+greet = () => {
+  console.log("hello, again")
+}
+
+const add = (a: number, b:number) => {
+  console.log(a + b);
+}
+
+add( 5,4)
+
+const added = (a: number, b:number, c?: number | string) => {
+  console.log(a + b);
+}
+
+added( 5,4)
+
+const addes = (a: number, b:number, c: number | string = 10) => {
+  console.log(a + b);
+  console.log(c)
+}
+
+addes( 5,4)
+addes(5,4,3)
+
+const minus = (a: number, b: number) : number => {
+  return a + b;
+}
+
+let result = minus(10, 7);

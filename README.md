@@ -2,3 +2,7 @@
 
 npm i -g typescript
     tsc sandbox.ts
+
+
+tsc --init
+

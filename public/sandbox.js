@@ -1,3 +1,4 @@
+"use strict";
 //let character = 'mario';
 // console.log(character);
 // const inputs = document.querySelectorAll('input');
@@ -5,30 +6,30 @@
 //   console.log(input);
 // });
 //type basice
-var character = 'mario';
-var age = 30;
-var isBlackBelt = false;
+let character = 'mario';
+let age = 30;
+let isBlackBelt = false;
 character = 'luigi';
 age = 40;
 isBlackBelt = true;
-var circ = function (diameter) {
+const circ = (diameter) => {
     return diameter * Math.PI;
 };
 console.log(circ(7.5));
 // 4 object & array
-var names = ['luigi', 'mario', 'yoshi'];
+let names = ['luigi', 'mario', 'yoshi'];
 names.push('toad');
 //names.push(5) error
 //names[0]= 'toad'; error
-var numbers = [2, 3, 4, 5];
+let numbers = [2, 3, 4, 5];
 numbers.push(2);
 //numbers.push("hi") //error
 //numbers[0] = "oi" //error
-var mixed = ["ken", 4, "bal", 3];
+let mixed = ["ken", 4, "bal", 3];
 mixed.push(2);
 mixed.push("hello");
 //----------------------------------------object 
-var ninja = {
+let ninja = {
     name: 'mario',
     belt: 'black',
     age: 30
@@ -51,47 +52,47 @@ ninja = {
 //   skills: ['oi', 1]
 // }
 //=== 5 Explicit type
-var characters;
-var ages;
-var isLoggedIn;
+let characters;
+let ages;
+let isLoggedIn;
 character = "bal";
 age = 30;
 isLoggedIn = true;
 //arrays
-var ninjas;
+let ninjas;
 //ninjas.push('oi') //error
 ninjas = ['noman', 'salahuddin'];
-var ninjass = [];
+let ninjass = [];
 ninjas.push('oi');
 //------union type
-var mixedArray = [];
+let mixedArray = [];
 mixedArray.push('hello');
 mixedArray.push(20);
 mixedArray.push(true);
 console.log(mixedArray);
-var uid;
+let uid;
 uid = 12;
 uid = "oi";
 ///--------object
-var ninjaOne;
+let ninjaOne;
 ninjaOne = { name: 'yoshi', age: 30 };
-var ninjaTwo;
+let ninjaTwo;
 ninjaTwo = { name: 'mario', age: 20, beltColor: 'black' };
 //ninjaTwo = { name: 'mario', age: 20, beltColor: 'black', skills: "bal"} error
 //================= 6 Dynamic (any) type
-var bage = 20;
+let bage = 20;
 bage = true;
 console.log(bage);
 bage = "hello";
 console.log(bage);
 bage = { name: "luigi" };
 console.log(bage);
-var mixedAny = [];
+let mixedAny = [];
 mixedAny.push(5);
 mixedAny.push("oi");
 mixedAny.push(false);
 console.log(mixedAny);
-var ninjaAny;
+let ninjaAny;
 ninjaAny = { name: 'yoshi', age: 25 };
 console.log(ninjaAny);
 ninjaAny = { name: 25, age: "oi" };

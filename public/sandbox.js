@@ -1,4 +1,3 @@
-"use strict";
 //let character = 'mario';
 // console.log(character);
 // const inputs = document.querySelectorAll('input');
@@ -172,24 +171,7 @@ form.addEventListener('submit', (e) => {
     console.log(type.value, toform.value, details.value, amount.valueAsNumber);
 });
 //==12 classes
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // public amount: number;
-    // constructor(c:string, d:string, a:number){
-    //   this.client = c;
-    //   this.details = d;
-    //   this.amount = a
-    // }
-    constructor(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`;
-    }
-}
+import { Invoice } from './classes/Invoice.js';
 const invOne = new Invoice('mario', 'Work on mario website', 250);
 const invTwo = new Invoice('luigi', 'Work on luigi website', 300);
 //console.log(invOne, invTwo);

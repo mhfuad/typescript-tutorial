@@ -119,3 +119,27 @@ let ninjaTwo: {
 
 ninjaTwo = { name: 'mario', age: 20, beltColor: 'black'}
 //ninjaTwo = { name: 'mario', age: 20, beltColor: 'black', skills: "bal"} error
+
+
+//================= 6 Dynamic (any) type
+let bage: any = 20;
+bage = true;
+console.log(bage)
+bage = "hello";
+console.log(bage)
+bage = { name: "luigi"};
+console.log(bage)
+
+
+let mixedAny: any[] = [];
+mixedAny.push(5)
+mixedAny.push("oi")
+mixedAny.push(false)
+console.log(mixedAny);
+
+let ninjaAny: { name: any, age: any};
+ninjaAny = { name: 'yoshi', age: 25}
+console.log(ninjaAny)
+
+ninjaAny = {name:25, age:"oi"}
+console.log(ninjaAny);

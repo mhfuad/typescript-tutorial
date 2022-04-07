@@ -183,3 +183,49 @@ const minus = (a: number, b: number) : number => {
 }
 
 let result = minus(10, 7);
+
+
+//==============9 type aliases
+type StringOrNumber = string | number;
+type objectWithNumber = {name: string, uid: StringOrNumber}
+
+const logDetails = (uid: StringOrNumber, item: string) => {
+  console.log(`${item} has uid of ${uid}`)
+}
+
+const greeting = (user: objectWithNumber) => {
+  console.log(`${user.name} says hello`);
+}
+
+const greetingAgain = (user: objectWithNumber) => {
+  console.log(`${user.name} says hello`);
+}
+
+
+//=============10 Function signatures
+
+//example 1
+let greetings: (a: string, b: string) => void;
+greetings = (name: string, gree: string) => {
+  console.log(`${name} says ${gree}`)
+}
+
+//example 2
+let calculatior : (a: number, b: number, c: string) => number;
+calculatior = (numOne: number, numTow: number, action: string) => {
+  if(action == 'add'){
+    return numOne + numTow;
+  }else{
+    return numOne - numTow;
+  }
+}
+
+//example 3
+let logDetailsTow: (obj: {name: string, age: number}) => void;
+
+type person = {name: string, age: number};
+
+logDetailsTow = (ninja: person) => {
+  console.log(`${ninja.name} is ${ninja.age}`)
+}
+

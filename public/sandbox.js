@@ -132,3 +132,24 @@ const greeting = (user) => {
 const greetingAgain = (user) => {
     console.log(`${user.name} says hello`);
 };
+//=============10 Function signatures
+//example 1
+let greetings;
+greetings = (name, gree) => {
+    console.log(`${name} says ${gree}`);
+};
+//example 2
+let calculatior;
+calculatior = (numOne, numTow, action) => {
+    if (action == 'add') {
+        return numOne + numTow;
+    }
+    else {
+        return numOne - numTow;
+    }
+};
+//example 3
+let logDetailsTow;
+logDetailsTow = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age}`);
+};

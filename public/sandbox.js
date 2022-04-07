@@ -123,3 +123,12 @@ const minus = (a, b) => {
     return a + b;
 };
 let result = minus(10, 7);
+const logDetails = (uid, item) => {
+    console.log(`${item} has uid of ${uid}`);
+};
+const greeting = (user) => {
+    console.log(`${user.name} says hello`);
+};
+const greetingAgain = (user) => {
+    console.log(`${user.name} says hello`);
+};

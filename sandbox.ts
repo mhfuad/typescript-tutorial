@@ -71,3 +71,51 @@ ninja = {
 //   age: 40,
 //   skills: ['oi', 1]
 // }
+
+
+
+
+//=== 5 Explicit type
+
+
+let characters: string;
+let ages: number;
+let isLoggedIn: boolean;
+
+character = "bal";
+age = 30;
+isLoggedIn = true;
+
+//arrays
+let ninjas: string[];
+//ninjas.push('oi') //error
+ninjas = ['noman', 'salahuddin'];
+
+
+let ninjass: string[] = [];
+ninjas.push('oi')
+
+
+//------union type
+let mixedArray: (string|number|boolean)[] = [];
+mixedArray.push('hello');
+mixedArray.push(20);
+mixedArray.push(true);
+console.log(mixedArray);
+
+let uid: string|number;
+uid = 12;
+uid = "oi"
+
+///--------object
+let ninjaOne: object;
+ninjaOne = { name: 'yoshi', age: 30};
+
+let ninjaTwo: {
+  name: string,
+  age: number,
+  beltColor: string
+}
+
+ninjaTwo = { name: 'mario', age: 20, beltColor: 'black'}
+//ninjaTwo = { name: 'mario', age: 20, beltColor: 'black', skills: "bal"} error

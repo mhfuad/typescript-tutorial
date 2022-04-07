@@ -50,3 +50,31 @@ ninja = {
 //   age: 40,
 //   skills: ['oi', 1]
 // }
+//=== 5 Explicit type
+var characters;
+var ages;
+var isLoggedIn;
+character = "bal";
+age = 30;
+isLoggedIn = true;
+//arrays
+var ninjas;
+//ninjas.push('oi') //error
+ninjas = ['noman', 'salahuddin'];
+var ninjass = [];
+ninjas.push('oi');
+//------union type
+var mixedArray = [];
+mixedArray.push('hello');
+mixedArray.push(20);
+mixedArray.push(true);
+console.log(mixedArray);
+var uid;
+uid = 12;
+uid = "oi";
+///--------object
+var ninjaOne;
+ninjaOne = { name: 'yoshi', age: 30 };
+var ninjaTwo;
+ninjaTwo = { name: 'mario', age: 20, beltColor: 'black' };
+//ninjaTwo = { name: 'mario', age: 20, beltColor: 'black', skills: "bal"} error

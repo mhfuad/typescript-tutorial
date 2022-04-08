@@ -251,20 +251,40 @@ const toform = document.querySelector('#tofrom') as HTMLInputElement;
 const details = document.querySelector('#details') as HTMLInputElement;
 const amount = document.querySelector('#amount') as HTMLInputElement;
 
-form.addEventListener('submit', (e: Event) => {
-  e.preventDefault();
 
-  console.log(
-    type.value,
-    toform.value,
-    details.value,
-    amount.valueAsNumber
-  )
-})
 
 //==12 classes
 
-import { Invoice } from './classes/Invoice.js'
+import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
+import { HasFormatter } from './interfaces/HasFormatter.js';
+
+form.addEventListener('submit', (e: Event) => {
+  e.preventDefault();
+
+  
+  let doc : HasFormatter;
+  if(type.value === 'invoice'){
+    doc = new Invoice(toform.value, details.value, amount.valueAsNumber);
+  }else{
+    doc = new Payment(toform.value, details.value, amount.valueAsNumber)
+  }
+
+  console.log(
+   doc
+  )
+})
+
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
+
+// docOne = new Invoice('mario', "web work", 200);
+// docTwo = new Payment('yoshi', "Plambing work", 500);
+
+// let docs: HasFormatter[] = [];
+// docs.push(docOne);
+// docs.push(docTwo);
+// console.log(docs);
 
 
 const invOne = new Invoice('mario', 'Work on mario website', 250);

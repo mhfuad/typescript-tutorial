@@ -166,12 +166,28 @@ const type = document.querySelector('#type');
 const toform = document.querySelector('#tofrom');
 const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log(type.value, toform.value, details.value, amount.valueAsNumber);
-});
 //==12 classes
 import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let doc;
+    if (type.value === 'invoice') {
+        doc = new Invoice(toform.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(toform.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
+});
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
+// docOne = new Invoice('mario', "web work", 200);
+// docTwo = new Payment('yoshi', "Plambing work", 500);
+// let docs: HasFormatter[] = [];
+// docs.push(docOne);
+// docs.push(docTwo);
+// console.log(docs);
 const invOne = new Invoice('mario', 'Work on mario website', 250);
 const invTwo = new Invoice('luigi', 'Work on luigi website', 300);
 //console.log(invOne, invTwo);

@@ -183,6 +183,27 @@ form.addEventListener('submit', (e) => {
     }
     list.render(doc, type.value, 'end');
 });
+//const addUID = <T>(obj: T) => {
+//const addUID = <T extends object>(obj: T) => {
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docsOne = addUID({ name: 'yoshi', age: 40 });
+//let docsTwo = addUID("fuad");
+//let docsTwo = addUID({name: "fuad"});
+console.log(docsOne.uid);
+const docsThree = {
+    uid: 1,
+    resourceName: "person",
+    data: { name: 'shaun' }
+};
+const docsFour = {
+    uid: 2,
+    resourceName: 'shoppingList',
+    data: ['bread', 'milk', 'toilet roll']
+};
+console.log(docsThree, docsFour);
 // let docOne: HasFormatter;
 // let docTwo: HasFormatter;
 // docOne = new Invoice('mario', "web work", 200);

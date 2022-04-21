@@ -6,3 +6,6 @@ npm i -g typescript
 
 tsc --init
 
+tsc src/decorator.ts --experimentalDecorators "true" --emitDecoratorMetadata "true"
+
+tsc src/decorator.ts --experimentalDecorators "true" --emitDecoratorMetadata "true" && node src/decorator.js

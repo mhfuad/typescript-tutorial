@@ -1,6 +1,7 @@
 function CarDecorator(constructor: Function){
     console.log(constructor)
 }
+
 @CarDecorator
 class Car {
     brand: string;

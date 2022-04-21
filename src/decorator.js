@@ -26,7 +26,18 @@ var Car = /** @class */ (function () {
     ], Car);
     return Car;
 }());
+var Vehicle = /** @class */ (function () {
+    function Vehicle() {
+    }
+    Vehicle = __decorate([
+        CarDecorator
+    ], Vehicle);
+    return Vehicle;
+}());
+;
+var vehicle = new Vehicle();
+console.log("Vehicle date :", vehicle.date);
 var car = new Car("ford");
 console.log(car.brand);
 console.log(car.date);
-car.giveMeDate();
+//(<any>car).giveMeDate();

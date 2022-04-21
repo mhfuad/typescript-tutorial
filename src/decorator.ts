@@ -17,8 +17,14 @@ class Car {
     }
 }
 
+@CarDecorator
+class Vehicle {};
+
+const vehicle = new Vehicle();
+console.log("Vehicle date :", (<any>vehicle).date)
+
 const car = new Car("ford");
 console.log(car.brand)
 console.log((<any>car).date);
 
-(<any>car).giveMeDate();
+//(<any>car).giveMeDate();

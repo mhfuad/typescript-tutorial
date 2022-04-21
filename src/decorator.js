@@ -11,6 +11,9 @@ function CarDecorator(constructor) {
     //console.log(constructor)
     //console.log("---decorator constructor invoked")
     constructor.prototype.date = new Date();
+    constructor.prototype.giveMeDate = function () {
+        alert(this.Date);
+    };
 }
 var Car = /** @class */ (function () {
     function Car(brand) {
@@ -26,3 +29,4 @@ var Car = /** @class */ (function () {
 var car = new Car("ford");
 console.log(car.brand);
 console.log(car.date);
+car.giveMeDate();

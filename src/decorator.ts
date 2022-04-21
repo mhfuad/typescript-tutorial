@@ -2,6 +2,9 @@ function CarDecorator(constructor: Function){
     //console.log(constructor)
     //console.log("---decorator constructor invoked")
     constructor.prototype.date = new Date();
+    constructor.prototype.giveMeDate = function(){
+        alert(this.Date)
+    }
 }
 
 
@@ -16,4 +19,6 @@ class Car {
 
 const car = new Car("ford");
 console.log(car.brand)
-console.log((<any>car).date)
+console.log((<any>car).date);
+
+(<any>car).giveMeDate();

@@ -7,7 +7,12 @@ function CarDecorator(constructor: Function){
     }
 }
 
+function OtherDecorator(constructor: Function){
+    constructor.prototype.other = "ohter value"
+}
 
+
+@OtherDecorator
 @CarDecorator
 class Car {
     brand: string;
@@ -17,14 +22,11 @@ class Car {
     }
 }
 
-@CarDecorator
-class Vehicle {};
 
-const vehicle = new Vehicle();
-console.log("Vehicle date :", (<any>vehicle).date)
 
 const car = new Car("ford");
 console.log(car.brand)
 console.log((<any>car).date);
+console.log((<any>car).other);
 
 //(<any>car).giveMeDate();

@@ -15,29 +15,23 @@ function CarDecorator(constructor) {
         alert(this.Date);
     };
 }
+function OtherDecorator(constructor) {
+    constructor.prototype.other = "ohter value";
+}
 var Car = /** @class */ (function () {
     function Car(brand) {
         this.brand = brand;
         //console.log("---class constructor invoked")
     }
     Car = __decorate([
+        OtherDecorator,
         CarDecorator,
         __metadata("design:paramtypes", [String])
     ], Car);
     return Car;
 }());
-var Vehicle = /** @class */ (function () {
-    function Vehicle() {
-    }
-    Vehicle = __decorate([
-        CarDecorator
-    ], Vehicle);
-    return Vehicle;
-}());
-;
-var vehicle = new Vehicle();
-console.log("Vehicle date :", vehicle.date);
 var car = new Car("ford");
 console.log(car.brand);
 console.log(car.date);
+console.log(car.other);
 //(<any>car).giveMeDate();

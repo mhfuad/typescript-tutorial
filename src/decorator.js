@@ -9,12 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 function CarDecorator(constructor) {
     //console.log(constructor)
-    console.log("---decorator constructor invoked");
+    //console.log("---decorator constructor invoked")
+    constructor.prototype.date = new Date();
 }
 var Car = /** @class */ (function () {
     function Car(brand) {
         this.brand = brand;
-        console.log("---class constructor invoked");
+        //console.log("---class constructor invoked")
     }
     Car = __decorate([
         CarDecorator,
@@ -24,3 +25,4 @@ var Car = /** @class */ (function () {
 }());
 var car = new Car("ford");
 console.log(car.brand);
+console.log(car.date);

@@ -7,12 +7,18 @@ function CarDecorator(constructor: Function){
     }
 }
 
-function OtherDecorator(constructor: Function){
-    constructor.prototype.other = "ohter value"
+function OtherDecorator(name: string){
+    if(name === "Mike"){
+
+    }else{
+        
+    }
+    return function(constructor: Function){
+        constructor.prototype.other = name
+    }
 }
 
-
-@OtherDecorator
+@OtherDecorator("Mike")
 @CarDecorator
 class Car {
     brand: string;

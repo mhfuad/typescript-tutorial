@@ -15,8 +15,14 @@ function CarDecorator(constructor) {
         alert(this.Date);
     };
 }
-function OtherDecorator(constructor) {
-    constructor.prototype.other = "ohter value";
+function OtherDecorator(name) {
+    if (name === "Mike") {
+    }
+    else {
+    }
+    return function (constructor) {
+        constructor.prototype.other = name;
+    };
 }
 var Car = /** @class */ (function () {
     function Car(brand) {
@@ -24,7 +30,7 @@ var Car = /** @class */ (function () {
         //console.log("---class constructor invoked")
     }
     Car = __decorate([
-        OtherDecorator,
+        OtherDecorator("Mike"),
         CarDecorator,
         __metadata("design:paramtypes", [String])
     ], Car);

@@ -8,11 +8,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 function CarDecorator(constructor) {
-    console.log(constructor);
+    //console.log(constructor)
+    console.log("---decorator constructor invoked");
 }
 var Car = /** @class */ (function () {
     function Car(brand) {
         this.brand = brand;
+        console.log("---class constructor invoked");
     }
     Car = __decorate([
         CarDecorator,
